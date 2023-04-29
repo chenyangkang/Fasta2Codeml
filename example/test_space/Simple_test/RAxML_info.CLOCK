@@ -1,0 +1,128 @@
+
+
+IMPORTANT WARNING: Sequences baleag_1 and whteag_4 are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/CLOCK.step5.phy.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 133 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 59.51%
+
+RAxML rapid bootstrapping and subsequent ML search
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+Executing 2 rapid bootstrap inferences and thereafter a thorough ML search 
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 133
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+/beegfs/store4/chenyangkang/software/standard-RAxML/raxml -f a -x 42 -p 42 -# 2 -m GTRGAMMA -s /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/CLOCK.step5.phy -n CLOCK -T 1 -w /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test 
+
+
+
+Time for BS model parameter optimization 0.105865
+Bootstrap[0]: Time 0.649112 seconds, bootstrap likelihood -1623.623414, best rearrangement setting 5
+Bootstrap[1]: Time 0.535190 seconds, bootstrap likelihood -1662.781553, best rearrangement setting 13
+
+
+Overall Time for 2 Rapid Bootstraps 1.264282 seconds
+Average Time per Rapid Bootstrap 0.632141 seconds
+
+Starting ML Search ...
+
+Fast ML optimization finished
+
+Fast ML search Time: 2.508127 seconds
+
+Slow ML Search 0 Likelihood: -1775.099109
+Slow ML optimization finished
+
+Slow ML search Time: 2.356132 seconds
+Thorough ML search Time: 1.641609 seconds
+
+Final ML Optimization Likelihood: -1775.078881
+
+Model Information:
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+alpha: 7.305754
+Tree-Length: 14.552521
+rate A <-> C: 0.581831
+rate A <-> G: 1.422934
+rate A <-> T: 0.334933
+rate C <-> G: 0.985266
+rate C <-> T: 2.033024
+rate G <-> T: 1.000000
+
+freq pi(A): 0.352242
+freq pi(C): 0.132593
+freq pi(G): 0.187824
+freq pi(T): 0.327340
+
+
+ML search took 6.522706 secs or 0.001812 hours
+
+Combined Bootstrap and ML search took 7.788528 secs or 0.002163 hours
+
+Drawing Bootstrap Support Values on best-scoring ML tree ...
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bestTree.CLOCK
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bestTree.CLOCK
+
+Program execution info written to /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_info.CLOCK
+All 2 bootstrapped trees written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bootstrap.CLOCK
+
+Best-scoring ML tree written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bestTree.CLOCK
+
+Best-scoring ML tree with support values written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bipartitions.CLOCK
+
+Best-scoring ML tree with support values as branch labels written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space/Simple_test/RAxML_bipartitionsBranchLabels.CLOCK
+
+Overall execution time for full ML analysis: 7.796530 secs or 0.002166 hours or 0.000090 days
+
