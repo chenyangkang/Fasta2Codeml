@@ -69,5 +69,5 @@ Fasta2Codeml.py \
 10. Generate p values and other statistics using scipy.
 
 
-# To do
-Develope multiple alignment mode. For example, porcess multiple cds files and concatenate them, then run codeml on the whole gene.
+# Disclaimer
+This package is not responsible for any reliable ouput and scientific/commercial interpretation.
