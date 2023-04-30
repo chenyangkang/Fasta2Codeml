@@ -70,4 +70,4 @@ Fasta2Codeml.py \
 
 
 # Disclaimer
-This package is not responsible for any reliable ouput and scientific/commercial interpretation.
+This package is not liable for any ouput results and scientific/commercial interpretation (see the MIT license).
