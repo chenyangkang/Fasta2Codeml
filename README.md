@@ -7,6 +7,9 @@ A codeml (PAML package) to make life easier. Dummy input unaligned multi-species
 3. MUSCLE
 4. RAXML
 
+5. biopython (python package)
+6. newick (python package)
+
 must be installed beforehand
 
 ## Input data
