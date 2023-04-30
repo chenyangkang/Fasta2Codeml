@@ -26,7 +26,7 @@ cd to example/test_space/
 
 **Change the absolute path in the command lines below to to your path.**
 
-##For single fasta file mode
+## For single fasta file mode
 type:
 ```
 Fasta2Codeml.py \
