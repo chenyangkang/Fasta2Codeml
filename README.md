@@ -13,7 +13,7 @@ A codeml (PAML package) to make life easier. Dummy input unaligned multi-species
 must be installed beforehand
 
 ## Input data
-1. A single gene fasta alignment file (multi-species)
+1. A single gene fasta sequence file (multi-species, not aligned).
 2. A text file which indicate the foreground species. On species each line.
 
 
