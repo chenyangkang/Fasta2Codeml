@@ -1,5 +1,5 @@
 # Fasta2Codeml
-A codeml (PAML package) to make life easier. Dummy input unaligned multi-species fasta file (a single gene), and output codeml result.
+A codeml (PAML package) wrapper to make life easier. Dummy input unaligned multi-species fasta file (a single gene), and output codeml result.
 
 ## Prerequisites
 1. Codeml (PAML version 4.10.6)
