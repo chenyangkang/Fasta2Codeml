@@ -68,7 +68,7 @@ Fasta2Codeml.py \
 3. Refine alignment using MACSE.
 4. Replace frameshift(!) and stop codon with NNN using MACSE.
 5. Concatenate files (if in multi-file mode).
-6. Remove codon columns with more than 70% species missed, and remove species with more than 70% codons as "NNN".
+6. Remove codon columns with more than 50% species missed, and remove species with more than 50% codons as "NNN".
 7. Build tree with raxml `-f a -x 42 -p 42 -m GTRGAMMA `.
 8. Co-filter fasta file and tree file. Trim and annotate tree with the foreground information provided. Output alignment as phylip format.
 9. Generate codeml configuration files for both branch-site null model (omega=1) and alternative model.
