@@ -38,7 +38,10 @@ Fasta2Codeml.py \
 --macse /beegfs/store4/chenyangkang/software/macse_v2.07.jar \
 --raxml /beegfs/store4/chenyangkang/software/standard-RAxML/raxml \
 --codeml /beegfs/store4/chenyangkang/miniconda3/bin/codeml \
---boostrap 10
+--boostrap 10 \
+--codon_frac 0.5 \
+--sp_frac 0.5
+
 ```
 
 ## For multi-file model (multi-cds file mode):
@@ -53,7 +56,10 @@ Fasta2Codeml.py \
 --macse /beegfs/store4/chenyangkang/software/macse_v2.07.jar \
 --raxml /beegfs/store4/chenyangkang/software/standard-RAxML/raxml \
 --codeml /beegfs/store4/chenyangkang/miniconda3/bin/codeml \
---boostrap 10
+--boostrap 10 \
+--codon_frac 0.5 \
+--sp_frac 0.5
+
 ```
 
 # Workflow underneath
