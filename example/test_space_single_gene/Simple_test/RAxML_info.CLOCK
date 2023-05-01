@@ -1,0 +1,137 @@
+
+
+IMPORTANT WARNING: Sequences baleag_1 and whteag_4 are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 133 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 59.51%
+
+RAxML rapid bootstrapping and subsequent ML search
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+Executing 10 rapid bootstrap inferences and thereafter a thorough ML search 
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 133
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+/beegfs/store4/chenyangkang/software/standard-RAxML/raxml -f a -x 42 -p 42 -# 10 -m GTRGAMMA -s /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy -n CLOCK -T 1 -w /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test 
+
+
+
+Time for BS model parameter optimization 0.094338
+Bootstrap[0]: Time 0.556267 seconds, bootstrap likelihood -1623.623414, best rearrangement setting 5
+Bootstrap[1]: Time 0.430421 seconds, bootstrap likelihood -1662.781553, best rearrangement setting 13
+Bootstrap[2]: Time 0.424767 seconds, bootstrap likelihood -1683.300899, best rearrangement setting 13
+Bootstrap[3]: Time 0.406560 seconds, bootstrap likelihood -1710.834784, best rearrangement setting 11
+Bootstrap[4]: Time 0.481813 seconds, bootstrap likelihood -1677.422802, best rearrangement setting 15
+Bootstrap[5]: Time 0.496532 seconds, bootstrap likelihood -1868.391565, best rearrangement setting 9
+Bootstrap[6]: Time 0.426735 seconds, bootstrap likelihood -1633.581788, best rearrangement setting 6
+Bootstrap[7]: Time 0.390587 seconds, bootstrap likelihood -1728.364226, best rearrangement setting 10
+Bootstrap[8]: Time 0.362047 seconds, bootstrap likelihood -1877.448712, best rearrangement setting 9
+Bootstrap[9]: Time 0.381691 seconds, bootstrap likelihood -1704.039640, best rearrangement setting 9
+
+
+Overall Time for 10 Rapid Bootstraps 4.383034 seconds
+Average Time per Rapid Bootstrap 0.438303 seconds
+
+Starting ML Search ...
+
+Fast ML optimization finished
+
+Fast ML search Time: 3.711237 seconds
+
+Slow ML Search 0 Likelihood: -1775.212135
+Slow ML Search 1 Likelihood: -1775.177217
+Slow ML optimization finished
+
+Slow ML search Time: 3.432889 seconds
+Thorough ML search Time: 1.414882 seconds
+
+Final ML Optimization Likelihood: -1775.067580
+
+Model Information:
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+alpha: 7.365914
+Tree-Length: 14.407747
+rate A <-> C: 0.579249
+rate A <-> G: 1.468998
+rate A <-> T: 0.350852
+rate C <-> G: 0.995318
+rate C <-> T: 2.067885
+rate G <-> T: 1.000000
+
+freq pi(A): 0.352242
+freq pi(C): 0.132593
+freq pi(G): 0.187824
+freq pi(T): 0.327340
+
+
+ML search took 8.578215 secs or 0.002383 hours
+
+Combined Bootstrap and ML search took 12.962891 secs or 0.003601 hours
+
+Drawing Bootstrap Support Values on best-scoring ML tree ...
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+Program execution info written to /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_info.CLOCK
+All 10 bootstrapped trees written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bootstrap.CLOCK
+
+Best-scoring ML tree written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+Best-scoring ML tree with support values written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bipartitions.CLOCK
+
+Best-scoring ML tree with support values as branch labels written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bipartitionsBranchLabels.CLOCK
+
+Overall execution time for full ML analysis: 12.973071 secs or 0.003604 hours or 0.000150 days
+

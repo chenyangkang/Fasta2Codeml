@@ -1,0 +1,408 @@
+Multi-file mode:  False
+-------------------- Runing Step 1: filterout_full_N_seq -----------------------
+Command:  F2C_filterout_full_N_seq.py --in_fasta /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/single_gene/CLOCK.fasta --out_fasta /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step1.fasta
+
+--------------------------- Step 1 finished! -----------------------------------
+
+-------------------- Runing Step 2: run muscle alignment -----------------------
+Command:  /beegfs/store4/chenyangkang/software/ParaAT2.0/muscle -in /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step1.fasta -out /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step2.fasta -maxiters 5 -diags
+
+--------------------------- Step 2 finished! -----------------------------------
+
+-------------------- Runing Step 3: run muscle alignment -----------------------
+Command:  java -jar -Xmx5G /beegfs/store4/chenyangkang/software/macse_v2.07.jar -prog refineAlignment -align /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step2.fasta -out_AA /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.AA.fasta -out_NT /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.NT.fasta
+file : /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step2.fasta
+
+54	sequences with genetic code	The_Standard_Code
+
+starting standard refinement...
+
+start refining the alignment
+
+refine 2 cut : sum of pairs ========= 0 => -410895.5
+
++++............+++.++++.++++++..+.+...++.+.+......+..+....+..+++++++.+.++..++..++..+++++++...+++++++++++++
+
+refine 2 cut : sum of pairs ========= 1 => -78843.8
+
+...................+....................+...+.....................++....+.......+...+..+.....+........+...
+
+refine 2 cut : sum of pairs ========= 2 => -76457.2
+
+............................-...................................+.........................+...............
+
+refine 2 cut : sum of pairs ========= 3 => -76450.5
+
+-........................................................................................---------------..
+
+The file '/beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.NT.fasta' was created.
+
+The file '/beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.AA.fasta' was created.
+
+PROGRAM HAS FINISHED SUCCESSFULLY
+
+
+--------------------------- Step 3 finished! -----------------------------------
+
+-------------------- Runing Step 4: Trim alignment using MACSE -----------------------
+Command:  java -jar -Xmx5G /beegfs/store4/chenyangkang/software/macse_v2.07.jar -prog exportAlignment -codonForInternalFS NNN -codonForInternalStop NNN -charForRemainingFS N -codonForExternalFS NNN -codonForFinalStop NNN -align /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.NT.fasta -out_NT /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step4.fasta
+file : /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.NT.fasta
+
+54	sequences with genetic code	The_Standard_Code
+
+The file '/beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step4.fasta' was created.
+
+The file '/beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step3.NT_AA.fasta' was created.
+
+PROGRAM HAS FINISHED SUCCESSFULLY
+
+
+--------------------------- Step 4 finished! -----------------------------------
+
+---------------------------- Runing Step 5: Build tree --------------------------
+Command:  F2C_convert.sh /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step2.fasta > /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy
+
+Command:  /beegfs/store4/chenyangkang/software/standard-RAxML/raxml -f a -x 42 -p 42 -# 10 -m GTRGAMMA -s /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy -n CLOCK -T 1 -w /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test
+
+
+WARNING: The number of threads is currently set to 1
+
+You can specify the number of threads to run via -T numberOfThreads
+
+NumberOfThreads must be set to an integer value greater than 1
+
+
+
+RAxML, will now set the number of threads automatically to 2 !
+
+
+
+Warning, you specified a working directory via "-w"
+
+Keep in mind that RAxML only accepts absolute path names, not relative ones!
+
+
+
+
+
+IMPORTANT WARNING: Sequences baleag_1 and whteag_4 are exactly identical
+
+
+
+IMPORTANT WARNING
+
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+
+Normally they should be excluded from the analysis.
+
+
+
+Just in case you might need it, an alignment file with 
+
+sequence duplicates removed is printed to file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy.reduced
+
+
+
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+
+
+This is the RAxML Master Pthread
+
+
+
+This is RAxML Worker Pthread Number: 1
+
+
+
+
+
+This is RAxML version 8.2.12 released by Alexandros Stamatakis on May 2018.
+
+
+
+With greatly appreciated code contributions by:
+
+Andre Aberer      (HITS)
+
+Simon Berger      (HITS)
+
+Alexey Kozlov     (HITS)
+
+Kassian Kobert    (HITS)
+
+David Dao         (KIT and HITS)
+
+Sarah Lutteropp   (KIT and HITS)
+
+Nick Pattengale   (Sandia)
+
+Wayne Pfeiffer    (SDSC)
+
+Akifumi S. Tanabe (NRIFS)
+
+Charlie Taylor    (UF)
+
+
+
+
+
+Alignment has 133 distinct alignment patterns
+
+
+
+Proportion of gaps and completely undetermined characters in this alignment: 59.51%
+
+
+
+RAxML rapid bootstrapping and subsequent ML search
+
+
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+
+
+
+
+
+Executing 10 rapid bootstrap inferences and thereafter a thorough ML search 
+
+
+
+All free model parameters will be estimated by RAxML
+
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+
+
+Partition: 0
+
+Alignment Patterns: 133
+
+Name: No Name Provided
+
+DataType: DNA
+
+Substitution Matrix: GTR
+
+
+
+
+
+
+
+
+
+RAxML was called as follows:
+
+
+
+/beegfs/store4/chenyangkang/software/standard-RAxML/raxml -f a -x 42 -p 42 -# 10 -m GTRGAMMA -s /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step5.phy -n CLOCK -T 1 -w /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test 
+
+
+
+
+
+
+
+Time for BS model parameter optimization 0.094338
+
+Bootstrap[0]: Time 0.556267 seconds, bootstrap likelihood -1623.623414, best rearrangement setting 5
+
+Bootstrap[1]: Time 0.430421 seconds, bootstrap likelihood -1662.781553, best rearrangement setting 13
+
+Bootstrap[2]: Time 0.424767 seconds, bootstrap likelihood -1683.300899, best rearrangement setting 13
+
+Bootstrap[3]: Time 0.406560 seconds, bootstrap likelihood -1710.834784, best rearrangement setting 11
+
+Bootstrap[4]: Time 0.481813 seconds, bootstrap likelihood -1677.422802, best rearrangement setting 15
+
+Bootstrap[5]: Time 0.496532 seconds, bootstrap likelihood -1868.391565, best rearrangement setting 9
+
+Bootstrap[6]: Time 0.426735 seconds, bootstrap likelihood -1633.581788, best rearrangement setting 6
+
+Bootstrap[7]: Time 0.390587 seconds, bootstrap likelihood -1728.364226, best rearrangement setting 10
+
+Bootstrap[8]: Time 0.362047 seconds, bootstrap likelihood -1877.448712, best rearrangement setting 9
+
+Bootstrap[9]: Time 0.381691 seconds, bootstrap likelihood -1704.039640, best rearrangement setting 9
+
+
+
+
+
+Overall Time for 10 Rapid Bootstraps 4.383034 seconds
+
+Average Time per Rapid Bootstrap 0.438303 seconds
+
+
+
+Starting ML Search ...
+
+
+
+Fast ML optimization finished
+
+
+
+Fast ML search Time: 3.711237 seconds
+
+
+
+Slow ML Search 0 Likelihood: -1775.212135
+
+Slow ML Search 1 Likelihood: -1775.177217
+
+Slow ML optimization finished
+
+
+
+Slow ML search Time: 3.432889 seconds
+
+Thorough ML search Time: 1.414882 seconds
+
+
+
+Final ML Optimization Likelihood: -1775.067580
+
+
+
+Model Information:
+
+
+
+Model Parameters of Partition 0, Name: No Name Provided, Type of Data: DNA
+
+alpha: 7.365914
+
+Tree-Length: 14.407747
+
+rate A <-> C: 0.579249
+
+rate A <-> G: 1.468998
+
+rate A <-> T: 0.350852
+
+rate C <-> G: 0.995318
+
+rate C <-> T: 2.067885
+
+rate G <-> T: 1.000000
+
+
+
+freq pi(A): 0.352242
+
+freq pi(C): 0.132593
+
+freq pi(G): 0.187824
+
+freq pi(T): 0.327340
+
+
+
+
+
+ML search took 8.578215 secs or 0.002383 hours
+
+
+
+Combined Bootstrap and ML search took 12.962891 secs or 0.003601 hours
+
+
+
+Drawing Bootstrap Support Values on best-scoring ML tree ...
+
+
+
+
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+
+
+
+
+
+
+Found 1 tree in File /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+
+
+Program execution info written to /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_info.CLOCK
+
+All 10 bootstrapped trees written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bootstrap.CLOCK
+
+
+
+Best-scoring ML tree written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK
+
+
+
+Best-scoring ML tree with support values written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bipartitions.CLOCK
+
+
+
+Best-scoring ML tree with support values as branch labels written to: /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bipartitionsBranchLabels.CLOCK
+
+
+
+Overall execution time for full ML analysis: 12.973071 secs or 0.003604 hours or 0.000150 days
+
+
+
+
+--------------------------- Step 5 finished! -----------------------------------
+
+-------------------- Runing Step 6: Co-filter alignment and fasta -----------------------
+Command:  F2C_co_filter_aln_and_tree.py --foreground_file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/foreground.txt --in_fasta /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step4.fasta --in_tree /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/RAxML_bestTree.CLOCK --out_phy /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step6.phy --out_tree /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.step6.tre
+
+--------------------------- Step 6 finished! -----------------------------------
+
+-------------------- Runing Step 7: Make codeml configure files -----------------------
+Command:  F2C_make_paml_ctl_file.py --input_seq_path CLOCK.step6.phy --input_tree_path CLOCK.step6.tre --ctl_path_null CLOCK.null.ctl --ctl_path_alt CLOCK.alternative.ctl --paml_output_null CLOCK.null.res.txt --paml_output_alt CLOCK.alt.res.txt
+
+--------------------------- Step 7 finished! -----------------------------------
+
+-------------------- Runing Step 8: Run codeml -----------------------
+----------------- Runing Alternative Model --------------------
+Command:  codeml CLOCK.alternative.ctl > CLOCK.alt.log
+
+----------------- Alternative Model Done --------------------
+----------------- Runing Null Model --------------------
+Command:  codeml CLOCK.null.ctl > CLOCK.null.log
+
+----------------- Null Model Done --------------------
+--------------------------- Step 8 finished! -----------------------------------
+
+-------------------- Runing Step 9: Stats codeml results -----------------------
+Command:  F2C_Parse_paml_output.py --null_file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.null.res.txt --alt_file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/CLOCK.alt.res.txt --out_file /beegfs/store4/chenyangkang/DEV/Fasta2Codeml/example/test_space_single_gene/Simple_test/final_stats.txt --df 1
+
+
+Null model log-likelihood: -2189.633858,
+
+Alternative model log-likelihood: -2189.633859,
+
+2_delta_l: -1.99999976757681e-06,
+
+p_values: 0.0
+
+
+
+
+--------------------------- Step 9 finished! -----------------------------------
+
+
+FINISH.
