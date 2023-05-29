@@ -18,7 +18,7 @@ Simply add ./script to your environment
 
 # Input data
 1. A single gene fasta sequence file (multi-species, not aligned).
-2. A text file which indicate the foreground species. On species each line.
+2. A text file which indicate the foreground species. One species each line.
 
 
 # Example
