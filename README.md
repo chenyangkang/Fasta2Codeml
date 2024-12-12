@@ -75,6 +75,3 @@ Fasta2Codeml.py \
 10. Run both codeml model.
 11. Generate p values and other statistics using scipy.
 
-
-# Disclaimer
-This package is not liable for any ouput results and scientific/commercial interpretation (see the MIT license).
